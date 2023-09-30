@@ -10,8 +10,9 @@
 </head>
 
 <body>
-    <div class="min-h-screen bg-purple-dark w-full"></div>
-    @yield('navbar')
+    <div class="min-h-screen bg-green-dark w-full">
+        @yield('content')
+    </div>
 </body>
 
 </html>
