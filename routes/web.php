@@ -18,3 +18,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', [DashboardController::class, 'index']);
+Route::get('/python-course', function(){
+    return view('course.PythonCourse');
+});
+Route::get('/courses', [CourseController::class, 'index']);

@@ -3,7 +3,7 @@
 @section('content')
     @include('navbar.navbar')
     <div class="w-full flex flex-col justify-center items-center pt-[10rem] ">
-        <div class="w-[30%] flex flex-col  justify-center items-center ">
+        <div class="w-[30%] flex flex-col justify-center items-center ">
             <span class="font-dm font-[700] text-center text-brown-dark text-[56px]">Level Up Your Coding Skills
                 with CoDelicate.
             </span>
