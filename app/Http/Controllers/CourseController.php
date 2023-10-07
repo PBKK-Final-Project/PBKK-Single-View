@@ -10,7 +10,7 @@ class CourseController extends Controller
     public function index()
     {
         $courses = Course::all();
-        return view('courses.PythonCourse', ['courses' => $courses]);
+        return view('course.PythonCourse', ['courses' => $courses]);
     }
 
 }

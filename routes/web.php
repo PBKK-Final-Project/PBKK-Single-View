@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BidangController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\CourseController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,7 +19,5 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', [DashboardController::class, 'index']);
-Route::get('/python-course', function(){
-    return view('course.PythonCourse');
-});
+Route::get('/python-course', [CourseController::class, 'index']);
 Route::get('/courses', [CourseController::class, 'index']);

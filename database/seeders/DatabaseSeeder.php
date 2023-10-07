@@ -8,6 +8,7 @@ use App\Models\Fitur;
 use App\Models\Plan;
 use App\Models\PlansFitur;
 use Illuminate\Database\Seeder;
+use App\Models\Course;
 
 class DatabaseSeeder extends Seeder
 {
@@ -207,5 +208,38 @@ class DatabaseSeeder extends Seeder
         PlansFitur::insert($plansFitursData);
 
         $this->command->info('PlansFitur seeded!');
+
+        $CoursesData = [
+            [
+                'judul' => 'Basic Python Programming',
+                'deskripsi' => 'Beginner Edition',
+                'rating' => 5,
+                'harga' => 0.0,
+                'bidangId' => '12'
+            ],
+            [
+                'judul' => 'Statistics for Data Science and Business Analysis',
+                'deskripsi' => 'Beginner Edition',
+                'rating' => 5,
+                'harga' => 0.0,
+                'bidangId' => '12'            
+            ],
+            [
+                'judul' => 'Data Scientist Beginners: Linear Regression Analysis',
+                'deskripsi' => 'Beginner Edition',
+                'rating' => 5,
+                'harga' => 0.0,
+                'bidangId' => '12'            
+            ],
+            [
+                'judul' => 'Learn Data Science with Python Pandas',
+                'deskripsi' => 'Intermediate',
+                'rating' => 5,
+                'harga' => 12.0,
+                'bidangId' => '12'            
+            ]
+        ];
+
+        Course::insert($CoursesData);
     }
 }
