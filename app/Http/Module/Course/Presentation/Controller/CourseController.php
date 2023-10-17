@@ -16,9 +16,6 @@ class CourseController
 
     public function createCourse(Request $request){
         $request = new CreateCourseRequest(
-            // $request->input('nama'),
-            // $request->input('price'),
-            // $request->input('description'),
             $request->input('judul'),
             $request->input('deskripsi'),
             $request->input('rating'),
@@ -26,6 +23,15 @@ class CourseController
             $request->input('bidangId')
         );
 
-        return $this->create_course_service->execute($request);
+        $data = $this->create_course_service->execute($request);
+
+        if($data){
+            return response()->json([
+                'status' => 'success',
+                'message' => 'Course created successfully',
+                'data' => $data
+            ], 201);
+        }
+
     }
 }
