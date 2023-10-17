@@ -10,7 +10,7 @@ class CourseRepository implements CourseRepositoryInterface
 {
     public function save(Course $course)
     {
-        DB::table('Courses')->insert(
+        $course = DB::table('Courses')->insert(
             [
               'judul' => $course->judul,
               'deskripsi' => $course->deskripsi,
@@ -19,5 +19,7 @@ class CourseRepository implements CourseRepositoryInterface
               'bidangId' => $course->bidangId
             ]
         );
+
+        return $course;
     }
 }

@@ -22,7 +22,7 @@ Route::get('/', [DashboardController::class, 'index']);
 Route::get('/python-course', [CourseController::class, 'index']);
 Route::get('/courses', [CourseController::class, 'index']);
 
-foreach (scandir($path = app_path('Module')) as $dir) {
+foreach (scandir($path = app_path('Http\Module')) as $dir) {
   if (file_exists($filepath = "{$path}/{$dir}/Course/Presentation/web.php")) {
       require $filepath;
   }

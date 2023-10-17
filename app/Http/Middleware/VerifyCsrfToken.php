@@ -12,6 +12,7 @@ class VerifyCsrfToken extends Middleware
      * @var array<int, string>
      */
     protected $except = [
-        //
+        // disble for web.php inside Module\Course\Presentation\Controller
+        'create_product'
     ];
 }

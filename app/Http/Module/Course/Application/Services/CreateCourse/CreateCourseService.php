@@ -5,12 +5,14 @@ namespace App\Http\Module\Course\Application\Services\CreateCourse;
 use App\Http\Module\Course\Application\Services\CreateCourse\CreateCourseRequest;
 use App\Http\Module\Course\Domain\Model\Course;
 use App\Http\Module\Course\Domain\Services\Repository\CourseRepositoryInterface;
+use App\Http\Module\Course\Infrastructure\Repository\CourseRepository;
 
 class CreateCourseService
 {
 
     public function __construct(
-        private CourseRepositoryInterface $course_repository
+        // private CourseRepositoryInterface $course_repository
+        private CourseRepository $course_repository
     )
     {
     }
@@ -26,6 +28,6 @@ class CreateCourseService
             $request->bidangId
         );
 
-        $this->course_repository->save($course);
+        return $this->course_repository->save($course);
     }
 }
